@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ezen</groupId>
-	<artifactId>bk_airline</artifactId>
-	<name>bk_airline</name>
+	<artifactId>bk</artifactId>
+	<name>bk-airline</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -150,7 +150,12 @@
     		<artifactId>spring-jdbc</artifactId>
     		<version>4.1.4.RELEASE</version>
 		</dependency>
-		
+		<dependency>
+    <groupId>commons-fileupload</groupId>
+    <artifactId>commons-fileupload</artifactId>
+    <version>1.2.1</version>
+</dependency>
+
 		
 		<!-- Test -->
 		<dependency>
