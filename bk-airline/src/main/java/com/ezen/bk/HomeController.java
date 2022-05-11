@@ -14,25 +14,32 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 
-	@RequestMapping(value="/")
-	public String maina() {
-		return "main";
-	}
-	
-	@RequestMapping(value="/index")
-	public String mainb() {
-		return "main";
-	}
-	/*
-	 * ÀÌ¿ë¾à°ü, °³ÀÎÁ¤º¸Ã³¸®¹æÄ§
-	 */
-	@RequestMapping("/tou")
-	public String tou() {
-		return "tou";
-	}
-	@RequestMapping("/private")
-	public String private1() {
-		return "private";
-	}
-	
+   @RequestMapping(value="/")
+   public String maina() {
+      return "main";
+   }
+   
+   @RequestMapping(value="/index")
+   public String mainb() {
+      return "main";
+   }
+   /*
+    * ì´ìš©ì•½ê´€, ê°œì¸ì •ë³´ì²˜ë¦¬ë°©ì¹¨
+    */
+   @RequestMapping("/tou")
+   public String tou() {
+      return "tou";
+   }
+   @RequestMapping("/private")
+   public String private1() {
+      return "private";
+   }
+   /*
+    * ì‚¬ì´íŠ¸ ì†Œê°œ
+    */
+   @RequestMapping("/introduce")
+   public String introduce1() {
+      return "introduce";
+   }
+   
 }

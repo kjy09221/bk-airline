@@ -16,50 +16,48 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources mapping="/image/**" location="/image/" />
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	
 	<!-- 
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	 -->
-	
+		<!-- 타일즈 실습 설정 -->
 	<beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
-      <beans:property name="definitions">
-         <beans:list>
-            <beans:value>classpath:tiles/*.xml</beans:value>
-         </beans:list>
-      </beans:property>
-      <beans:property name="preparerFactoryClass"
+    	<beans:property name="definitions">
+        	<beans:list>
+        		<beans:value>classpath:tiles/*.xml</beans:value>
+         	</beans:list>
+        </beans:property>
+        <beans:property name="preparerFactoryClass"
                    value="org.springframework.web.servlet.view.tiles2.SpringBeanPreparerFactory" />
    </beans:bean>
-   <beans:bean id="viewResolver"
-      class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-      <beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView" />
-   </beans:bean>
    
+    <beans:bean id="viewResolver"
+      class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+    	<beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView" />
+    </beans:bean>
+    
+	<!-- Mybatis -->
 	<beans:bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-			<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-			<beans:property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
-			<beans:property name="username" value="c##ezen"/>
-			<beans:property name="password" value="ez311"/>
+			<beans:property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+			<beans:property name="url" value="jdbc:oracle:thin:@tofha_high?TNS_ADMIN=/Users/saerom/tools/Wallet_tofha"/>
+			<beans:property name="username" value="admin"/>
+			<beans:property name="password" value="Tofhawhgdk1211"/>
 	</beans:bean>
 	
 	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<beans:property name="dataSource" ref="dataSource"/>
-		<beans:property name="mapperLocations" value="classpath:com/ezen/*/*.xml"/>
-	</beans:bean>
+    	<beans:property name="dataSource" ref="dataSource"/>
+    	<beans:property name="mapperLocations" value="classpath:com/*/*/*.xml"/>
+    </beans:bean>
+   
+    <beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+    	<beans:constructor-arg index="0" ref="sqlSessionFactory"></beans:constructor-arg>
+    </beans:bean>
 	
-	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-		 <beans:constructor-arg index="0" ref="sqlSessionFactory"></beans:constructor-arg>
-	</beans:bean>
-	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<beans:property name="maxUploadSize" value="52428800"/>
-		<beans:property name="maxInMemorySize" value="1000000"/>
-		<beans:property name="defaultEncoding" value="utf-8"/>
-	</beans:bean>
 	
-	<context:component-scan base-package="com.ezen.bk" />
-	
+	<context:component-scan base-package="com.*" />
 	
 	
 </beans:beans>
