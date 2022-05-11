@@ -8,18 +8,20 @@
 </head>
 <jsp:include page="cdn.jsp"/>
 <body>
-<header style="background-image: ./image/1.jpg">
 	<div style="overflow: scroll; width: 100%; height: 1000px" >	
 	<div class="container">
    <div align="center" style="align-content: center; width: 100%; height: 100%;">
 		<form class="searchsave" , method="post">
 		 <legend id="siteName" style="text-align: center;">항공권 예매</legend>
-		<table  style="text-align: center; float:left;">
+		 <table  style=" border-top: 1px solid #444444; border-bottom: 1px solid #444444; text-align: center;  
+		 width:100%; height: 150px; background-image:url(./image/skysky.jpg);">
+		<tr><td><table style="text-align: center; float:left; ">
 	   <tr><td>출발지 선택</td><th> <select class="selectOptions" id="Depart">
                      <option>출발지 선택</option>
                      <option value="inc" style="width: 100%">인천(INC)</option></select></th></tr></table>
                      <table style="text-align: center; float:left;">
-       <tr><td>목적지 선택</td><th>
+      <table style="text-align: center; float:left; "> 
+      <tr><td>목적지 선택</td><th>
         <div id="div1">
                <div class="divaa" style="margin-right: 20px; height: 20%;">
                 <select class="selectOptions"
@@ -51,7 +53,8 @@
          <tr><td>오는날 선택</td><th><input type="date" placeholder="도착 날짜 선택"></th></tr></table>
          <table style="text-align: center; float:left;">
          <tr><td>탑승 인원 수</td><th><input type="text"  name="people" placeholder="인원수" ></th></tr></table>
-      <button type="button" class="btn"><a href="">일정으로 조회</a></button>
+     <button type="button" class="btn btn-info " style="border-radius: 10px;">조회</button>
+               </td></tr></table>
       </form>
    </div>
   
@@ -64,7 +67,7 @@
       <a href="hawaii.jsp">
         <img src="./image/hawaii.jpg" alt="Lights" style="width:100%">
         <div class="caption">
-          <p style="color: blue; ">Hawaii 왕복 KRW 1,232,500~</p>
+          <p style="color: blue; ">하와이 왕복 KRW 1,232,500~</p>
         </div>
       </a>
     </div>
@@ -86,7 +89,7 @@
       <a href="thai.jsp">
         <img src="./image/thai.jpg" alt="Fjords" style="width:100%">
         <div class="caption">
-          <p style="color: blue; ">Thai 왕복 KRW 872,060~</p>
+          <p style="color: blue; ">태국 왕복 KRW 872,060~</p>
         </div>
       </a>
     </div>
@@ -96,6 +99,5 @@
 </div>
 </div>
 </div>
-</header>
 </body>
 </html>

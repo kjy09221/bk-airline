@@ -18,4 +18,7 @@
     <definition name="private" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/private.jsp"/>
     </definition>
+     <definition name="introduce" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/introduce.jsp"/>
+    </definition>
 </tiles-definitions>

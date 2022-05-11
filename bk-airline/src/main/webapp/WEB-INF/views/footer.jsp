@@ -11,7 +11,7 @@
             <div class="container">
                     <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-start">Copyrightⓒ2022 by BK airline</div>
-                    <div class="col-lg-4 text-lg-start">BK airline 고객센터 1577-5800<br>주소: 경기도 수원시 공항구 하늘길424 </div> 
+                    <div class="col-lg-4 text-lg-start">BK airline 고객센터 1577-5800<br>주소: 경기도 수원시 공항구 하늘길 424 </div> 
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-dark text-decoration-none me-3" href="tou">이용약관</a> |&emsp; <a class="link-dark text-decoration-none me-3" href="private">개인정보처리방침</a>
                     </div>

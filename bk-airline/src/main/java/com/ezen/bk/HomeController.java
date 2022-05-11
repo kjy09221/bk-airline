@@ -34,5 +34,12 @@ public class HomeController {
 	public String private1() {
 		return "private";
 	}
+	/*
+	 * 사이트 소개
+	 */
+	@RequestMapping("/introduce")
+	public String introduce1() {
+		return "introduce";
+	}
 	
 }
