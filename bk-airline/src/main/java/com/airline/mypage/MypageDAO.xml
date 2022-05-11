@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airline.mypage.MypageService">
+	<select id="mypage_act" resultType="com.airline.mypage.MypageDTO">
+		select * from bk_member where mem_no=#{param1}
+	</select>
+	<update id="mypage_modify">
+		update bk_member set mem_pw=#{param2}, mem_name=#{param3}, mem_birth=#{param4}, mem_tel=#{param5}, mem_email=#{param6}, mem_address=#{param7} where mem_id=#{param1}
+	</update>
+	<select id="mypage_leave" resultType="com.airline.mypage.MypageDTO">
+		select * from bk_member where mem_id=#{param1}
+	</select>
+	<delete id="mypage_delete">
+		delete from bk_member where mem_id=#{param1}
+	</delete>
+</mapper>
