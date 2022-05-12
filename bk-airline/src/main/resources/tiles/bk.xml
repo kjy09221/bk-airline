@@ -38,5 +38,17 @@
     <definition name="mypage_check" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/mypage_check.jsp"/>
     </definition>
+     <definition name="introduce" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/introduce.jsp"/>
+    </definition>
+     <definition name="hawaii" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/hawaii.jsp"/>
+    </definition>
+    <definition name="la" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/la.jsp"/>
+    </definition>
+    <definition name="thailand" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/thailand.jsp"/>
+    </definition>
     
 </tiles-definitions>

@@ -41,5 +41,19 @@ public class HomeController {
    public String introduce1() {
       return "introduce";
    }
-   
+   /*
+    * 여행지 추천
+    */
+   @RequestMapping("/hawaii")
+   public String hawaii1() {
+      return "hawaii";
+   }
+   @RequestMapping("/la")
+   public String la1() {
+      return "la";
+   }
+   @RequestMapping("/thailand")
+   public String thailand1() {
+      return "thailand";
+   }   
 }
