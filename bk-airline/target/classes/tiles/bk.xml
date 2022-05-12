@@ -3,22 +3,40 @@
 "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
 "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 <tiles-definitions>
+
 	<definition name="baseLayout" template="/WEB-INF/views/layout.jsp">
 		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
 		<put-attribute name="nav" value="/WEB-INF/views/nav.jsp" />
 		<put-attribute name="body" value="" />
 		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
 	</definition>
+	
 	<definition name="main" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/views/main.jsp"/>
 	</definition>
+	
 	<definition name="tou" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/tou.jsp"/>
     </definition>
+    
     <definition name="private" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/private.jsp"/>
     </definition>
-     <definition name="introduce" extends="baseLayout">
-      	<put-attribute name="body" value="/WEB-INF/views/introduce.jsp"/>
+    
+    <definition name="join" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/join.jsp"/>
     </definition>
+    
+    <definition name="login" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/login.jsp"/>
+    </definition>
+    
+    <definition name="mypage" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/mypage.jsp"/>
+    </definition>
+    
+    <definition name="mypage_check" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/mypage_check.jsp"/>
+    </definition>
+    
 </tiles-definitions>
