@@ -6,6 +6,22 @@
 <html>
 <head>
 <jsp:include page="cdn.jsp"/>
+<style type="text/css">
+h3 {
+	height: 70px;
+	width: 100%;
+	text-align:center;
+	padding-right: 700px;
+
+}
+#loginform {
+	top:0px;
+	width: 100%;
+	text-align: left;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+</style>
 <meta charset="UTF-8">
 <title>BK airline</title>
 <c:choose>
@@ -19,10 +35,19 @@
 </c:choose>
 </head>
 <body>
-	<form action="login_act" method="post">
-		<input type="text" name="mem_id">
-		<input type="password" name="mem_pw">
-		<button type="submit">로그인</button>
-	</form>
+	<div id="loginform">
+		<h3>로그인</h3>
+		<form action="login_act" method="post">
+			<div class="form-group form-group-lg col-xs-4">			
+				<label for="mem_id">아이디:</label>
+				<input type="text" class="form-control" id="mem_id" name="mem_id">
+					<br>
+				<label for="mem_pw">비밀번호:</label>
+				<input type="password" class="form-control" id="mem_pw" name="mem_pw">
+					<br>
+				<button class="btn btn-primary col-xs-5" type="submit">로그인</button>
+			</div>
+		</form>
+	</div>
 </body>
 </html>

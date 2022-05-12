@@ -4,10 +4,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+<jsp:include page="cdn.jsp"/>
+<style type="text/css">
+#header {
+
+}
+#main {
+width:100%;
+height:100%;
+padding-bottom: 60px;
+}
+#footer{
+position: fixed;
+bottom: 0px;
+width: 100%; 
+height: 50px; 
+line-height: 30px; 
+background-color: white; 
+font-size: 13px; 
+text-align: center;
+}
+</style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<jsp:include page="cdn.jsp"/>
 <body>
 <div id="container">
 		<div id="header">
