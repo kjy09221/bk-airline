@@ -4,6 +4,6 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.airline.join.JoinService">
 	<insert id="join_member">
-		insert into BK_MEMBER values(MEM_NO_seq.nextval,#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7})
+		insert into BK_MEMBER values(MEM_NO.nextval,#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7})
 	</insert>
 </mapper>    

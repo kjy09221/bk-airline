@@ -12,6 +12,7 @@
 	<c:choose>
 		<c:when test="${isLogOn == true && member != null }">
 			<a href="mypage?mem_no=${member.mem_no}"> ${member.mem_name} 님 </a>
+			<a href="logout">로그아웃</a>
 		</c:when>
 		<c:otherwise>
 		<ul class="nav navbar-nav navbar-right">
