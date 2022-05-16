@@ -39,12 +39,13 @@
     	<beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView" />
     </beans:bean>
     
+    
 	<!-- Mybatis -->
 	<beans:bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-			<beans:property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
-			<beans:property name="url" value="jdbc:oracle:thin:@tofha_high?TNS_ADMIN=/Users/saerom/tools/Wallet_tofha"/>
-			<beans:property name="username" value="admin"/>
-			<beans:property name="password" value="Tofhawhgdk1211"/>
+			<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+			<beans:property name="url" value="jdbc:oracle:thin:@DESKTOP-PE71T83:1521/xe"/>
+			<beans:property name="username" value="system"/>
+			<beans:property name="password" value="1234"/>
 	</beans:bean>
 	
 	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

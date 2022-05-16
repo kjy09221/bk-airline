@@ -6,12 +6,17 @@
 <head>
 <jsp:include page="cdn.jsp"/>
 <style type="text/css">
+html, boby {
+margin: 0;
+padding: 0;
+height: 100%;
+}
 #header {
 
 }
 #main {
 width:100%;
-height:100%;
+min-height:1000px;
 padding-bottom: 60px;
 }
 #footer{
@@ -20,7 +25,7 @@ bottom: 0px;
 width: 100%; 
 height: 50px; 
 line-height: 30px; 
-background-color: white; 
+background-color:white;
 font-size: 13px; 
 text-align: center;
 }

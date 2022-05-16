@@ -16,7 +16,7 @@ public class HomeController {
       return "main";
    }
    /*
-    * ì´ìš©ì•½ê´€, ê°œì¸ì •ë³´ì²˜ë¦¬ë°©ì¹¨
+    * ÀÌ¿ë¾à°ü, °³ÀÎÁ¤º¸Ã³¸®¹æÄ§
     */
    @RequestMapping("/tou")
    public String tou() {
@@ -27,11 +27,25 @@ public class HomeController {
       return "private";
    }
    /*
-    * ì‚¬ì´íŠ¸ ì†Œê°œ
+    * »çÀÌÆ® ¼Ò°³
     */
    @RequestMapping("/introduce")
    public String introduce1() {
       return "introduce";
    }
-   
+   /*
+    * ¿©ÇàÁö ÃßÃµ
+    */
+   @RequestMapping("/hawaii")
+   public String hawaii1() {
+      return "hawaii";
+   }
+   @RequestMapping("/la")
+   public String la1() {
+      return "la";
+   }
+   @RequestMapping("/thailand")
+   public String thailand1() {
+      return "thailand";
+   }   
 }
