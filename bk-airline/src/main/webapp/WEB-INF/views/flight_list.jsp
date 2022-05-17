@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form action="flight_listdetail" method="post">
+<table>
 
+</table>
+</form>
 </body>
 </html>

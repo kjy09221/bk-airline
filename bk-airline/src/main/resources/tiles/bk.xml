@@ -50,5 +50,19 @@
     <definition name="thailand" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/thailand.jsp"/>
     </definition>
-    
+     <definition name="notice_list" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/notice_list.jsp"/>
+    </definition>
+    <definition name="notice_input" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/notice_input.jsp"/>
+    </definition>
+    <definition name="notice_detail" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/notice_detail.jsp"/>
+    </definition>
+    <definition name="notice_delete" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/notice_delete.jsp"/>
+    </definition>
+    <definition name="notice_modify" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/notice_modify.jsp"/>
+    </definition>
 </tiles-definitions>

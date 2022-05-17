@@ -18,12 +18,12 @@
 			<td><div id="int"><h3 style="font-weight: bold;  ">가슴이 두근거리는, 하와이 여행</h3></div></td>
 		</tr>
 
-	<table id="table2" border="1">
+	<table id="table2" >
 		<tr>
 			<td>
 				<div class="hawaii">
 					<p>
-				<img src="./image/hrc.jpg" style="width:100%; height: 300px; ">
+				<img src="./image/hrc.jpg" style="width:180%; height: 400px; ">
 				</p>
 				<h2>
 					A.하와이 다이아몬드 헤드
@@ -32,7 +32,7 @@
 				오아후에 있는 화산으로 하이킹 코스가 유명하다.
 				</p>
 				 <p>
-				<img src="./image/table.png" style="width:80%; height: 100px; ">
+				<img src="./image/table.png" style="width:120%; height: 200px; ">
 				</p>
 				
 				<h2>
