@@ -12,19 +12,32 @@ padding: 0;
 height: 100%;
 }
 #header {
-
+position:absolute;
+top:0px;
+width:100%;
+height:75px;
+padding-left: 15px;
+background-color: skyblue;
+}
+#nav {
+top:75px;
+width:100%;
+position:absolute;
 }
 #main {
+position:absolute;
+top:130px;
 width:100%;
 min-height:1000px;
-padding-bottom: 60px;
+padding-bottom: 200px;
+text-align: center;
 }
 #footer{
 position: fixed;
 bottom: 0px;
 width: 100%; 
 height: 50px; 
-line-height: 30px; 
+line-height: 25px; 
 background-color:white;
 font-size: 13px; 
 text-align: center;
