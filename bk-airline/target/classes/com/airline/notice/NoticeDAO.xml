@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper">
+	<mapper namespace="com.airline.notice.NoticeService">
+	<!-- 공지사항 글 작성 -->
+	<insert id="notice_input">
+		insert into BK_NOTICE values(NOTICE_NO.nextval,#{param1},#{param2},#{param3},0,SYSDATE)
+	</insert>
+	
+	<!-- 공지사항 글 목록 -->
+	<select id="notice_list" resultType="com.airline.notice.NoticeDTO">
+		SELECT * FROM BK_NOTICE ORDER BY NOTICE_NO DESC
+	</select>
+	
+	<!-- 공지사항 글 자세히 보기 -->
+	<select id="notice_detail" resultType="com.airline.notice.NoticeDTO">
+		SELECT * FROM BK_NOTICE WHERE NOTICE_NO=#{param1}
+	</select>
+	
+	<!-- 공지사항 조회수 증가 -->
+	<update id="readcnt">
+		UPDATE BK_NOTICE SET READCNT=READCNT+1 WHERE NOTICE_NO=#{param1}
+	</update>
+	
+	<!-- 공지사항 글 삭제 -->
+	<delete id="notice_delete">
+		DELETE FROM BK_NOTICE WHERE NOTICE_NO=#{param1}
+	</delete>
+	
+	<!-- 공지사항 글 수정 -->
+	<update id="modify">
+	update BK_NOTICE set sort=#{param1}, writer=#{param2}, title=#{param3}, content=#{param4}, writeday=#{param5}, readcnt=#{param6} where notice_no=#{param7}
+	</update>
+	
+</mapper>    
