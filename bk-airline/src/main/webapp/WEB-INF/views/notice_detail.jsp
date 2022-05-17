@@ -58,9 +58,10 @@ function check(){
 			<td colspan="2" align="right">
 			<button class="w-15 btn btn-md btn-primary" type="button" onclick="location.href='notice_list'">목록</button>
 			<c:choose>
-				<c:when test="${isLogOn == true && bk_member.mem_id == 'admin' && bk_member.mem_no == 1}">
-					<button class="w-15 btn btn-md btn-danger" type="submit" onclick="return check()">삭제</button>
-				</c:when>
+					<c:when test="${isLogOn == true }">
+				<button class="w-15 btn btn-md btn-danger" type="submit" onclick="return check()">삭제</button>
+				<button class="w-15 btn btn-md btn-danger" type="button" onclick="location.href='notice_modify'">수정</button>
+					</c:when>
 			</c:choose>
 			</td>
 		</tr>

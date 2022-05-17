@@ -10,7 +10,8 @@
 <div class="container">
 	<table class="table table-hover" style="width:70%; margin: auto; margin-bottom: 10%; align:center">
 <form action="notice_save" method="post">
-<table border="1" width="400">
+<h2 class="mb-5 fw-bold" align="center">공지사항 글 작성</h2>
+<table border="1" width="400" style="text-align: center; ">
 <tr>
 	<td>작성자</td>
 	<td><input class="form-control" type="text" name="writer"></td>

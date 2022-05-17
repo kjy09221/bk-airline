@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper
-    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-    "http://mybatis.org/dtd/mybatis-3-mapper">
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper">
 	<mapper namespace="com.airline.notice.NoticeService">
 	<!-- 공지사항 글 작성 -->
 	<insert id="notice_input">
@@ -29,8 +29,8 @@
 	</delete>
 	
 	<!-- 공지사항 글 수정 -->
-	<update id="modify">
-	update BK_NOTICE set sort=#{param1}, writer=#{param2}, title=#{param3}, content=#{param4}, writeday=#{param5}, readcnt=#{param6} where notice_no=#{param7}
+	<update id="notice_modify">
+		UPDATE BK_NOTICE set writer=#{param1}, title=#{param2}, content=#{param3} where notice_no=#{param4}
 	</update>
 	
-</mapper>    
+</mapper>

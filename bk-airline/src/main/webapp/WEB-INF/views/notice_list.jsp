@@ -47,9 +47,9 @@
 			</tr>
 		</c:forEach>
 		<c:choose>
-			<c:when test="${isLogOn == true && bk_member.mem_id == 'admin' && bk_member.mem_no == 1}">
+			<c:when test="${isLogOn == true}">
 			<tr>
-				<td colspan="5" align="right"><button class="w-15 btn btn-sm btn-success" onclick="location.href='notice_input'">글작성</button></td>
+				<td colspan="5" align="right"><button class="w-15 btn btn-md btn-primary" onclick="location.href='notice_input'">글작성</button></td>
 			</tr>
 			</c:when>
 		</c:choose>

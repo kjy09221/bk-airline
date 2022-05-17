@@ -16,11 +16,11 @@ public interface NoticeService {
 	//공지사항 조회수 증가
 	public void readcnt(int notice_no);
 
-	//공지사항 글 삭제
+	// 공지사항 글 삭제
 	public void notice_delete(int notice_no);
-
+	
 	//공지사항 글 수정
-	public void notice_modify(String writer, String title, String content, int notice_no);
+	public void notice_modify(String writer, String title, String content,int notice_no);
 
 	//공지사항 글 검색
 	public ArrayList<NoticeDTO> notice_searchtitle(String search);

@@ -74,8 +74,8 @@ public class NoticeController {
 			return "redirect:notice_list";
 		}
 		//공지사항 글 수정
-		@RequestMapping(value="/notice_modifyform")
-		public String notice_modifyform1(HttpServletRequest request, Model mo){
+		@RequestMapping(value="/notice_modify")
+		public String notice_modify(HttpServletRequest request, Model mo){
 		int notice_no;
 		notice_no = Integer.parseInt(request.getParameter("notice_no"));
 		
@@ -98,7 +98,7 @@ public class NoticeController {
 		content = multi.getParameter("content");
 		
 		NoticeService dao = sqlSession.getMapper(NoticeService.class);
-		dao.notice_modify(writer, title, content, notice_no);
+		dao.notice_modify(writer, title, content,notice_no);
 		
 		return "redirect:notice_list";
 	}	
