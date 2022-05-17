@@ -9,7 +9,7 @@
 <body>
 	<footer>
 		<div class="container">
-			<span class="col-xs-4" style="left:0px; line-height: 55px;">
+			<span class="col-xs-4" style="left:0px; line-height: 50px;">
 				Copyrightⓒ2022 by BK airline
 			</span>
 			<span class="col-xs-4">
@@ -17,7 +17,7 @@
 			<br>
 				주소: 경기도 수원시 공항구 하늘길424
 			</span> 
-			<span class="col-xs-4" style="right: 0px; line-height: 55px;">
+			<span class="col-xs-4" style="right: 0px; line-height: 50px;">
 				<a href="tou">이용약관</a>&emsp;|
 				<a href="private">개인정보처리방침</a>
 			</span>

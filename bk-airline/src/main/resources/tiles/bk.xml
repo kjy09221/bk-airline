@@ -38,31 +38,41 @@
     <definition name="mypage_check" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/mypage_check.jsp"/>
     </definition>
+    
      <definition name="introduce" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/introduce.jsp"/>
     </definition>
+    
      <definition name="hawaii" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/hawaii.jsp"/>
     </definition>
+    
     <definition name="la" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/la.jsp"/>
     </definition>
+    
     <definition name="thailand" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/thailand.jsp"/>
     </definition>
+    
      <definition name="notice_list" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/notice_list.jsp"/>
     </definition>
+    
     <definition name="notice_input" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/notice_input.jsp"/>
     </definition>
+    
     <definition name="notice_detail" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/notice_detail.jsp"/>
     </definition>
+    
     <definition name="notice_delete" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/notice_delete.jsp"/>
     </definition>
+    
     <definition name="notice_modify" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/notice_modify.jsp"/>
     </definition>
+    
 </tiles-definitions>
