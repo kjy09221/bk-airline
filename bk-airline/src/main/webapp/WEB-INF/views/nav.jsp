@@ -42,7 +42,7 @@ bottom: 0px;
 				<li><a href="bording">탑승절차</a></li>
 			</ul>
 		</li>	  
-		<li><a href="notice_input">공지사항</a></li>
+		<li><a href="notice_list">공지사항</a></li>
 	</ul>
 </body>
 </html>

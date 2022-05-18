@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 <h2 align="center">공지사항 수정</h2>
 <form action="notice_modify?notice_no=${ndto.notice_no}" method="post" enctype="multipart/form-data">
 <table border="1" align="center">

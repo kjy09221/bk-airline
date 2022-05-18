@@ -3,14 +3,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+#in{
+	width: 100%;
+	height: 120px;
+	background-color:#e3f2fd;
+	bordercolor: #e3f2fd;
+	border-collapse: collapse;
+	border-radius: 10px;
+	text-align: center;
+	padding-bottom: 40px;
+}
+</style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 <div class="container">
-	<table class="table table-hover" style="width:70%; margin: auto; margin-bottom: 10%; align:center">
 <form action="notice_save" method="post">
-<table border="1" width="400">
+<h2 class="mb-5 fw-bold" align="center">공지사항 글 작성</h2><br>
+<table border="1" width="400" id="in" style="text-align: center; width:70%; margin: auto; margin-bottom: 10%; align:center">
 <tr>
 	<td>작성자</td>
 	<td><input class="form-control" type="text" name="writer"></td>
@@ -23,11 +35,10 @@
 	<td>내용</td>
 	<td><textarea name="content" rows="10" cols="100"></textarea></td>
 </tr>
+
 </table>
-<br><br>
 <button class="w-15 btn btn-md btn-primary" type="submit" onclick="return check()">등록하기</button>
 </form>
-</table>
 </div>
 </body>
 </html>

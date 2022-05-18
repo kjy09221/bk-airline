@@ -3,6 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+#table2{
+text-align: left;
+}
+</style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -22,9 +27,9 @@
 		<tr>
 			<td>
 				<div class="introduce">
-				<h5 style="font-weight: bold;">홈페이지를 방문해 주신 고객 여러분께 감사 드립니다.</h5><br>
+				<h5 style="font-weight: bold;" >홈페이지를 방문해 주신 고객 여러분께 감사 드립니다.</h5><br>
 				<p>
-				<img src="./image/sky.jpg" style="width:100%; height: 300px; ">
+				<img src="./image/flightsky.webp" style="width:100%; height: 350px; ">
 				</p>
 				<p>
 				BK항공은 2021년 3월 1일 항공기 8대를 보유한 아시아의 작은 항공사로 출범한 이래 적극적인 노선 개척과 서비스 혁신, 끊임없는 변화와 투자를 새롭게 이어 왔습니다.

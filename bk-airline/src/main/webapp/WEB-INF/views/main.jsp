@@ -173,7 +173,7 @@ p {
 							</table>
 						<table>
 							<tr><td id="btn">
-								<button type="button" class="btn btn-primary" onclick="check()">조회</button>			
+								<button type="submit" class="btn btn-primary"  href="flight_list">조회</button>			
 							</td></tr>
 						</table>
 					</table>				

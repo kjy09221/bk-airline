@@ -66,13 +66,49 @@
     <definition name="notice_detail" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/notice_detail.jsp"/>
     </definition>
-    
-    <definition name="notice_delete" extends="baseLayout">
-      	<put-attribute name="body" value="/WEB-INF/views/notice_delete.jsp"/>
-    </definition>
-    
+      
     <definition name="notice_modify" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/notice_modify.jsp"/>
     </definition>
     
+    <definition name="luggage" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/luggage.jsp"/>
+    </definition>
+    
+      <definition name="luggage1" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/luggage1.jsp"/>
+    </definition>
+    
+      <definition name="luggage2" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/luggage2.jsp"/>
+    </definition>
+    
+      <definition name="luggage3" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/luggage3.jsp"/>
+    </definition>
+    
+     <definition name="passenger" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/passenger.jsp"/>
+    </definition>
+    
+      <definition name="passenger1" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/passenger1.jsp"/>
+    </definition>
+    
+      <definition name="passenger2" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/passenger2.jsp"/>
+    </definition>
+    
+    <definition name="passenger3" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/passenger3.jsp"/>
+    </definition>
+    
+    <definition name="bording" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/bording.jsp"/>
+    </definition>
+    
+     <definition name="flight_list" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/flight_list.jsp"/>
+    </definition>
+
 </tiles-definitions>
