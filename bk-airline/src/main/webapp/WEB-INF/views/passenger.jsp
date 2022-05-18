@@ -3,6 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+#table2{
+text-align: left;
+}
+</style>
 <jsp:include page="toptop1.jsp"/>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -26,7 +31,7 @@
 				<h3 style="font-weight: bold; color: skyblue; ">유아 동반 승객</h3><br>
 				<h4>어린 아이와 함께 여행할 때 더 안심하고 여행하실 수 있도록 유용한 정보를 안내 드립니다.</h4><br>
 				
-				<img src="./image/baby.jpeg"><h3 style="font-weight: bold; color: navy; ">운임 안내</h3>
+				<img src="./image/baby.webp"  style="width:110%; height: 400px; "><h3 style="font-weight: bold; color: navy; ">운임 안내</h3>
 				<p>
 				⊙생후 7일이상 유아부터 여행가능<br>
 				⊙만 24개월 미만 유아의 항공운임<br>

@@ -3,6 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+#table2{
+text-align: left;
+}
+</style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -23,7 +28,7 @@
 				<div class="bording">
 				<h5 style="font-weight: bold;">탑승 절차를 안내합니다. 다양한 방법으로 좌석을 배정받고, 수하물 수속 및 탑승권을 발급할 수 있습니다.</h5><br>
 				<p>
-				<img src="./image/ts.webp" style="width:100%; height: 300px; ">
+				<img src="./image/tt.webp" style="width:100%; height: 300px; ">
 				</p>
 				<h3 style="font-weight: bold; color: navy; ">국내/국제선 탑승 절차</h3><br>
 				<h4>1. 터미널 도착</h4>

@@ -3,6 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+#table2{
+text-align: left;
+}
+</style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>

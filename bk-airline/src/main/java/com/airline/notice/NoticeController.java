@@ -40,7 +40,8 @@ public class NoticeController {
 			noticeService.notice_input(writer, title, content);
 			return "redirect:notice_list";
 		}
-
+		
+		//공지사항 글 목록
 		@RequestMapping("/notice_list")
 		public String notice_list(Model model) {
 			NoticeService noticeService = sqlSession.getMapper(NoticeService.class);
@@ -74,7 +75,7 @@ public class NoticeController {
 			return "redirect:notice_list";
 		}
 		//공지사항 글 수정
-		@RequestMapping(value="/notice_modify")
+		@RequestMapping(value="/notice_modifyform", method={RequestMethod.POST})
 		public String notice_modify(HttpServletRequest request, Model mo){
 		int notice_no;
 		notice_no = Integer.parseInt(request.getParameter("notice_no"));
@@ -84,44 +85,46 @@ public class NoticeController {
 		
 		mo.addAttribute("ndto", ndto);
 		
-		return "notice_modify";
-	}
-	@RequestMapping(value="/notice_modify", method=RequestMethod.POST)
-	public String notice_modify1(MultipartHttpServletRequest multi)
-	{
-		int notice_no;
-		String writer, title, content;
-		
-		notice_no = Integer.parseInt(multi.getParameter("notice_no"));
-		writer = multi.getParameter("writer");
-		title = multi.getParameter("title");
-		content = multi.getParameter("content");
-		
-		NoticeService dao = sqlSession.getMapper(NoticeService.class);
-		dao.notice_modify(writer, title, content,notice_no);
-		
-		return "redirect:notice_list";
-	}	
-	@RequestMapping(value="/notice_search", method=RequestMethod.POST)
-	public String notice_search1(HttpServletRequest request, Model mo)
-	{
-		String category, search;
-		category = request.getParameter("category");
-		search = request.getParameter("search");
-		
-		NoticeService dao = sqlSession.getMapper(NoticeService.class);
-		ArrayList<NoticeDTO> lista = null;
-		if(category.equals("title"))
-		{
-			 lista = dao.notice_searchtitle(search);
+			return "notice_modify";
 		}
-		else if(category.equals("writer"))
+		@RequestMapping(value="/notice_modify", method={RequestMethod.POST})
+		public String notice_modify(MultipartHttpServletRequest multi)
 		{
-			lista = dao.notice_searchwriter(search);
+			int notice_no;
+			String writer, title, content;
+			
+			notice_no = Integer.parseInt(multi.getParameter("notice_no"));
+			writer = multi.getParameter("writer");
+			title = multi.getParameter("title");
+			content = multi.getParameter("content");			
+			
+			NoticeService dao = sqlSession.getMapper(NoticeService.class);
+			dao.notice_modify(writer, title, content,notice_no);
+			
+			return "redirect:notice_list";
+		}	
+		
+		//공지사항 글 검색
+		@RequestMapping(value="/notice_search", method=RequestMethod.POST)
+		public String notice_search1(HttpServletRequest request, Model mo)
+		{
+			String category, search;
+			category = request.getParameter("category");
+			search = request.getParameter("search");
+			
+			NoticeService dao = sqlSession.getMapper(NoticeService.class);
+			ArrayList<NoticeDTO> lista = null;
+			if(category.equals("title"))
+			{
+				 lista = dao.notice_searchtitle(search);
+			}
+			else if(category.equals("writer"))
+			{
+				lista = dao.notice_searchwriter(search);
+			}
+			
+			mo.addAttribute("lista", lista);
+			
+			return "notice_list";
 		}
-		
-		mo.addAttribute("lista", lista);
-		
-		return "notice_list";
 	}
-}

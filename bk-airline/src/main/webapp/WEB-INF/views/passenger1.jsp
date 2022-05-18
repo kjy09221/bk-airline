@@ -3,6 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+#table2{
+text-align: left;
+}
+</style>
 <jsp:include page="toptop1.jsp"/>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -37,8 +42,8 @@
 				<h3 style="font-weight: bold; color: navy; ">휠체어 서비스</h3>
 				<h4>서비스 이용 안내</h4>
 				<p>
-				⊙장애, 질병, 고령 등 신체적, 건강상의 이유로 거동이 불편한 승객에게 휠체어 서비스를 제공합니다.
-				⊙탑승 수속부터 탑승까지 전담 직원이 보조하고, 목적지 공항 도착 후에는 터미널 내 도착장까지 이동을 도와드립니다.
+				⊙장애, 질병, 고령 등 신체적, 건강상의 이유로 거동이 불편한 승객에게 휠체어 서비스를 제공합니다.<br>
+				⊙탑승 수속부터 탑승까지 전담 직원이 보조하고, 목적지 공항 도착 후에는 터미널 내 도착장까지 이동을 도와드립니다.<br>
 				⊙휠체어 서비스는 미리 신청하신 승객에게 우선 제공합니다.<br>
 				</p>
 				<h4>기내 전용 휠체어 사용 신청</h4>

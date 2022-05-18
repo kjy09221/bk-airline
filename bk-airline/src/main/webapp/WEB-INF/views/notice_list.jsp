@@ -4,14 +4,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+#hh
+{	
+	background-color:#e3f2fd;
+	bordercolor: #e3f2fd;
+	border-collapse: collapse;
+}
+</style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 <div class="container">
-<h3 align="center"> 검색하기</h3>
-<form action="notice_search" method="post" align="center">
-<select name="category">
+<h4 align="right" style="padding-right: 100px;"> 검색하기</h4>
+<form action="notice_search" method="post" align="right">
+<select name="category" >
 	<option value="title">제목
 	<option value="writer">작성자
 </select>
@@ -20,24 +28,22 @@
 </form>
 
 <%-- 공지사항 --%>
-	<table class="table table-hover" style="width:70%; margin: auto; margin-bottom: 10%; align:center">
-		<thead>
-		<br><br>
+	<table class=" table table-hover" style="width:70%; margin: auto; margin-bottom: 10%; align:center" >
+		<br>
 			<tr>
 				<th colspan="5">
-					<h1 class="mb-5 fw-bold" align="center">공지사항</h1>
+					<h1 class="mb-5 fw-bold" align="center">공지사항</h1>	<h6 style="text-align: right; padding-right: 10px; ">글을 작성하시려면 로그인을 해주세요.</h6>
 				</th>
 			</tr>
-			<tr>
+			<tr id="hh">
 				<th scope="col" class="text-center">글번호</th>
 				<th scope="col" class="text-center">작성자</th>
 				<th scope="col" class="text-center">제목</th>
 				<th scope="col" class="text-center">조회수</th>
 				<th scope="col" class="text-center">작성일</th>
 			</tr>
-		</thead>
 		<tbody class="text-center">
-		<c:forEach items="${nlist }" var="n">
+		<c:forEach items="${nlist}" var="n">
 			<tr>
 				<td>${n.notice_no }</td>
 				<td>${n.writer }</td>
@@ -55,6 +61,7 @@
 		</c:choose>
 	</tbody>
 </table>
+
 </div>
 </body>
 </html>

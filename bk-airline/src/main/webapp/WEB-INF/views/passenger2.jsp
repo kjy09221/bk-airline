@@ -3,6 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+#table2{
+text-align: left;
+}
+</style>
 <jsp:include page="toptop1.jsp"/>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -22,7 +27,6 @@
 		<tr>
 			<td>
 				<div class="luggage">
-				
 				<h3 style="font-weight: bold; color: skyblue; ">임신중인 승객</h3><br>
 				<h4>임신중인 승객이 편안하고 안전하게 여행하실 수 있도록 세심한 서비스를 제공해 드립니다.</h4><br>
 				
