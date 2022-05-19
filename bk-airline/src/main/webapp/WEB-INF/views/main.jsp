@@ -48,7 +48,7 @@ function check(){
 </script>
 <style type="text/css">
 h2 {
-	
+	padding-top:20px;
 	padding-bottom: 40px;
 }
 h3 {
@@ -104,9 +104,9 @@ button {
 b {
 	font-weight: bolder;
 	font-size: 28px;
-	font-family: serif;
-	font-style: oblique;
-	color: blue;
+	font-family: sans-serif;
+	font-style: italic;
+	color: #0969C8;
 }
 p {
 	font-weight:lighter;
@@ -173,7 +173,7 @@ p {
 							</table>
 						<table>
 							<tr><td id="btn">
-								<button type="submit" class="btn btn-primary"  href="flight_list">조회</button>			
+								<button type="button" class="btn btn-primary" onclick="check()">조회</button>			
 							</td></tr>
 						</table>
 					</table>				
@@ -188,7 +188,7 @@ p {
 								<a href="hawaii">
 									<img src="./image/hawaii_thumbnail2.jpg"  style="width:350px; height:500px;">
 										<div class="caption">
-											<p><b>Hawaii</b>
+											<p><b>HAWAII</b>
 											<br>
 											왕복 KRW 1,232,500~</p>
 										</div>
@@ -212,7 +212,7 @@ p {
 							<a href="thailand">
 								<img src="./image/thailand_thumbnail.jpg"  style="width:350px; height:500px;">
 									<div class="caption">
-										<p><b>Thailand</b>
+										<p><b>THAILAND</b>
 										<br>
 										왕복 KRW 872,060~</p>
 									</div>

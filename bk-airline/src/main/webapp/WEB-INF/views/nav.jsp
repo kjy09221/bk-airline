@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +8,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <style type="text/css">
-li {
-bottom: 0px;
+#my {
+	float:right;
+	right: 10px;
 }
 </style>
 <meta charset="UTF-8">
@@ -18,7 +19,7 @@ bottom: 0px;
 <jsp:include page="cdn.jsp"/>
 <body>
 	<ul class="nav nav-tabs">
-		<li class="">
+		<li>
 			<a href="index">Home</a>
 		</li>	  
 		<li class="dropdown">
@@ -42,7 +43,17 @@ bottom: 0px;
 				<li><a href="bording">탑승절차</a></li>
 			</ul>
 		</li>	  
-		<li><a href="notice_list">공지사항</a></li>
+		<li><a href="notice_input">공지사항</a></li>			
+		<c:choose>
+			<c:when test="${isLogOn == true && member != null }">
+				<li id="my"><a href="logout">로그아웃</a></li>
+				<li id="my"><a href="mypage?mem_no=${member.mem_no}"> ${member.mem_name} 님 </a></li>
+			</c:when>
+			<c:otherwise>
+				<li id="my"><a href="join"><span class="glyphicon glyphicon-user"></span> 회원가입</a></li>
+				<li id="my"><a href="login"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
+			</c:otherwise>
+		</c:choose>
 	</ul>
 </body>
 </html>
