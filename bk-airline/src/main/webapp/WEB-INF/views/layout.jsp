@@ -6,10 +6,11 @@
 <head>
 <jsp:include page="cdn.jsp"/>
 <style type="text/css">
-html, boby {
-margin: 0;
-padding: 0;
-height: 100%;
+html,body {
+	margin:0;
+	padding:0;
+	width: 100%;  
+	height: 100%;
 }
 #header {
 position:absolute;
@@ -28,7 +29,7 @@ position:absolute;
 position:absolute;
 top:130px;
 width:100%;
-min-height:1000px;
+min-height:100%;
 padding-bottom: 200px;
 text-align: center;
 }
