@@ -75,8 +75,12 @@ h3 {
 	height: 70px;
 	text-align: center;
 }
+.btn {
+	margin-top: 50px;
+	margin-right: 30%;
+	margin-left: 30%;
+}
 </style>
-<jsp:include page="cdn.jsp"/>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>

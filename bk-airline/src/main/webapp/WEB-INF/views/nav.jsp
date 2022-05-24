@@ -4,9 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<jsp:include page="cdn.jsp"/>
 <style type="text/css">
 #my {
 	float:right;
@@ -18,6 +16,7 @@
 </head>
 <jsp:include page="cdn.jsp"/>
 <body>
+<nav>
 	<ul class="nav nav-tabs">
 		<li>
 			<a href="index">Home</a>
@@ -43,7 +42,9 @@
 				<li><a href="bording">탑승절차</a></li>
 			</ul>
 		</li>	  
-		<li><a href="notice_input">공지사항</a></li>			
+		<li>
+			<a href="notice_list">공지사항</a>
+		</li>			
 		<c:choose>
 			<c:when test="${isLogOn == true && member != null }">
 				<li id="my"><a href="logout">로그아웃</a></li>
@@ -55,5 +56,6 @@
 			</c:otherwise>
 		</c:choose>
 	</ul>
+</nav>
 </body>
 </html>
