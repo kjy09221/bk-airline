@@ -36,7 +36,7 @@ public class LoginController {
 		{
 			HttpSession session = request.getSession();
 			session.setAttribute("member", loginDTO);
-			session.setAttribute("isLogOn", true); //top.jsp 19열 참고
+			session.setAttribute("isLogOn", true);
 			mv.setViewName("redirect:index");
 		}
 		else

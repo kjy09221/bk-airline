@@ -5,22 +5,26 @@
 <head>
 <link href="./resources/css/styles.css" rel="stylesheet" />
 <style type="text/css">
-#side-table{
+#toptop{
+	position: absolute;
 	color: #000000;
-/* 	background-color: #FAFAFA; */
 	margin-top: 30px;
-	margin-left: 50px;
+	margin-left: 10px;
 	}
 font{
 	font-size: 14px;
 	color: #000000;
+}
+tr,td {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 </style>
 <meta charset="UTF-8">
 <title></title>
 </head>
 <body>
-	<table id="toptop" width="200px" align="left">
+	<table id="toptop" width="170px" align="left">
 		<tr>
 			<td><h5 style="display:inline">도움이 필요한 승객</h5></td>
 		</tr>

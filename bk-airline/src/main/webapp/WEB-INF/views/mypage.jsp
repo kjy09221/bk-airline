@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<jsp:include page="cdn.jsp"/>
 <style type="text/css">
 .form-group {
 	top:0px;
@@ -19,6 +18,11 @@
 h3 {
 	height: 70px;
 	text-align: center;
+}
+.btn {
+	margin-top: 50px;
+	margin-right: 30%;
+	margin-left: 30%;
 }
 </style>
 <meta charset="UTF-8">
@@ -97,8 +101,8 @@ h3 {
 					<label for="mem_address">주소:</label>
 					<input type="text" class="form-control" id="mem_address" name="mem_address" value="${p.mem_address}">
 						<br>
-					<button type="button" class="btn btn-primary" onclick="return modify_check()">EDIT</button>
-					<button type="button" class="btn btn-danger" onclick="location.href='mem_leave?mem_id=${p.mem_id}'">회원탈퇴</button>
+					<button type="button" class="btn btn-primary col-xs-5" onclick="return modify_check()">EDIT</button>
+					<button type="button" class="btn btn-danger col-xs-5" onclick="location.href='mem_leave?mem_id=${p.mem_id}'">회원탈퇴</button>
 				</div>
 			</c:forEach>
 		</form>
