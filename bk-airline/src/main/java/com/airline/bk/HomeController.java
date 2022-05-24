@@ -97,9 +97,9 @@ public class HomeController {
     * 비행 리스트 폼
     */
    @RequestMapping("/flight_view")
-   public String flight_view() {
-      return "flight_view";
-   }
+	public String flight_view() {
+		return "flight_view";
+	}
    /*
     * 비행 예약 링크
     */

@@ -43,7 +43,8 @@ function check(){
 		return false;
 	}
 	
-	f.submit();
+	location.href='flight_view'
+//	f.submit();
 }
 </script>
 <style type="text/css">
@@ -118,17 +119,16 @@ p {
 	<div class="container">
 	<h2>항공권 예매</h2>
 		<div id="researcharea">
-			<form class="searchsave" method="post" name="researchform">
-	 			
+			<form action="searchsave" method="post" name="researchform">	 			
 					<table id="big1">
 						<tr><td>
 							<table>
 		 						<tr><th>출발지</th></tr>
 		 						<tr>
 		 							<td>
-										<select class="selectOptions" id="Depart">
-											<option>선택</option>
-											<option value="inc" style="width: 100%;">인천(INC)</option>
+										<select class="selectOptions" id="depart">
+											<option value="">선택</option>
+											<option value="INC" style="width: 100%;">인천(INC)</option>
 											<option value="GMP" style="width: 100%;">김포(GMP)</option>
 										</select>
 									</td>
@@ -138,7 +138,7 @@ p {
 								<tr><th>목적지</th>
 								<tr><td>
 						            <select class="selectOptions" id="arrive">
-										<option>선택</option>
+										<option value="">선택</option>
 							            	<optgroup label="국내">
 							                	<option value="CJU" style="width: 100%;">제주(CJU)</option>
 							                	<option value="PUS" style="width: 100%;">부산/김해(PUS)</option>
@@ -174,7 +174,7 @@ p {
 							</table>
 						<table>
 						<tr><td id="btn">
-								<button type="button" class="btn btn-primary" onclick="location.href='flight_view'">조회</button>			
+								<button type="button" class="btn btn-primary" onclick="check()">조회</button>			
 							</td></tr>
 						</table>
 					</table>				
