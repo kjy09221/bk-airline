@@ -36,6 +36,7 @@ bottom: 50px;
 </style>
 </head>
 <body>
+<%-- 공지사항 글 자세히 보기 --%>
 	<div class="container">
 			<c:forEach items="${alist}" var="a">
 				<form action="notice_modifyform?notice_no=${a.notice_no}" method="post">

@@ -16,7 +16,7 @@ public class HomeController {
       return "main";
    }
    /*
-    * ÀÌ¿ë¾à°ü, °³ÀÎÁ¤º¸Ã³¸®¹æÄ§
+    * ì´ìš©ì•ˆë‚´, ê°œì¸ì •ë³´ì²˜ë¦¬ë°©ì¹¨
     */
    @RequestMapping("/tou")
    public String tou() {
@@ -27,14 +27,14 @@ public class HomeController {
       return "private";
    }
    /*
-    * »çÀÌÆ® ¼Ò°³
+    * ì‚¬ì´íŠ¸ ì†Œê°œ
     */
    @RequestMapping("/introduce")
    public String introduce1() {
       return "introduce";
    }
    /*
-    * ¿©ÇàÁö ÃßÃµ
+    * ì¶”ì²œ ì—¬í–‰ ìƒì„¸ë³´ê¸°
     */
    @RequestMapping("/hawaii")
    public String hawaii1() {
@@ -49,7 +49,7 @@ public class HomeController {
       return "thailand";
    }   
    /*
-    * ÀÌ¿ë¾È³»-¼öÇÏ¹°
+    * ìˆ˜í•˜ë¬¼
     */
    @RequestMapping("/luggage")
    public String luggage() {
@@ -68,7 +68,7 @@ public class HomeController {
       return "luggage3";
    }  
    /*
-    * ÀÌ¿ë¾È³»-µµ¿òÀÌ ÇÊ¿äÇÑ ½Â°´
+    * ë„ì›€ì´ í•„ìš”í•œ ìŠ¹ê°
     */
    @RequestMapping("/passenger")
    public String passenger() {
@@ -87,10 +87,36 @@ public class HomeController {
       return "passenger3";
    } 
    /*
-    * ÀÌ¿ë¾È³»- Å¾½Â ÀıÂ÷
+    * íƒ‘ìŠ¹ì ˆì°¨
     */
    @RequestMapping("/bording")
    public String bording() {
       return "bording";
    } 
+   /*
+    * ë¹„í–‰ ë¦¬ìŠ¤íŠ¸ í¼
+    */
+   @RequestMapping("/flight_view")
+   public String flight_view() {
+      return "flight_view";
+   }
+   /*
+    * ë¹„í–‰ ì˜ˆì•½ ë§í¬
+    */
+   @RequestMapping("/asiana")
+   public String asiana() {
+      return "asiana";
+   }
+   @RequestMapping("/singapore")
+   public String singapore() {
+      return "singapore";
+   }
+   @RequestMapping("/tway")
+   public String tway() {
+      return "tway";
+   }
+   @RequestMapping("/korean")
+   public String korean() {
+      return "korean";
+   }
 }
