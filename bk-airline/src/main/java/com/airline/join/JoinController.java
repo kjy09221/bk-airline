@@ -31,7 +31,7 @@ public class JoinController {
 		String mem_email=request.getParameter("mem_email");
 		String mem_address=request.getParameter("mem_address");
 		joinService.join_member(mem_id,mem_pw,mem_name,mem_birth,mem_tel,mem_email,mem_address);
-		mv.setViewName("redirect:index"); //homecontroller /book 참고 
+		mv.setViewName("redirect:index");
 		return mv;
 	}
 }
