@@ -15,6 +15,7 @@
 		<put-attribute name="body" value="/WEB-INF/views/main.jsp"/>
 	</definition>
 	
+	<!-- 이용약관, 개인정보처리방침 -->
 	<definition name="tou" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/tou.jsp"/>
     </definition>
@@ -55,6 +56,7 @@
       	<put-attribute name="body" value="/WEB-INF/views/thailand.jsp"/>
     </definition>
     
+    <!-- 공지사항 -->
      <definition name="notice_list" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/notice_list.jsp"/>
     </definition>
@@ -71,6 +73,7 @@
       	<put-attribute name="body" value="/WEB-INF/views/notice_modify.jsp"/>
     </definition>
     
+    <!-- 이용 안내 -->
     <definition name="luggage" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/luggage.jsp"/>
     </definition>
@@ -106,9 +109,24 @@
     <definition name="bording" extends="baseLayout">
       	<put-attribute name="body" value="/WEB-INF/views/bording.jsp"/>
     </definition>
-    
-     <definition name="flight_list" extends="baseLayout">
-      	<put-attribute name="body" value="/WEB-INF/views/flight_list.jsp"/>
-    </definition>
+	
+	<!-- 비행 리스트 폼 -->
+	<definition name="flight_view" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/flight_view.jsp"/>
+	</definition>
+	
+	<!-- 비행 요금 링크 -->
+	<definition name="asiana" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/asiana.jsp"/>
+	</definition>
+	<definition name="singapore" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/singapore.jsp"/>
+	</definition>
+	<definition name="tway" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/tway.jsp"/>
+	</definition>
+	<definition name="korean" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/korean.jsp"/>
+	</definition>
 
 </tiles-definitions>

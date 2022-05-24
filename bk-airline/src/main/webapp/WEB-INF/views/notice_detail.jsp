@@ -25,10 +25,10 @@ function check(){
 </head>
 <body>
 <%-- 공지사항 글 자세히 보기 --%>
+<c:forEach items="${nlist}" var="n">
 <form action="notice_modifyform?notice_no=${n.notice_no}" method="post">
 	<table class="table table-hover" style="width:80%; margin: auto; align:center">
-		<tr><th colspan="5"><h1 class="mb-5 fw-bold" align="center">공지사항</h1></th></tr>
-		<c:forEach items="${nlist}" var="n">
+		<tr><th colspan="5"><h1 class="mb-5 fw-bold" align="center">공지사항</h1></th></tr>		
 		<tr>
 			<th scope="col" class="text-center">글번호</th>
 			<td>${n.notice_no }<input type="hidden" name="notice_no" value="${n.notice_no}"></td>
@@ -59,7 +59,7 @@ function check(){
 			<button class="w-15 btn btn-md btn-primary" type="button" onclick="location.href='notice_list'">목록</button>
 			<c:choose>
 					<c:when test="${isLogOn == true }">
-				<button class="w-15 btn btn-md btn-danger" type="submit" onclick="return check()">삭제</button>
+				<button class="w-15 btn btn-md btn-danger" type="button" onclick="return check()">삭제</button>
 				<button class="w-15 btn btn-md btn-danger" type="submit">수정</button>
 					</c:when>
 			</c:choose>

@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2 align="center">공지사항 수정</h2>
-<form action="notice_modify?notice_no=${ndto.notice_no}" method="post" enctype="multipart/form-data">
+<form action="notice_modify?notice_no=${n.notice_no}" method="post" enctype="multipart/form-data">
 <table border="1" align="center">
 <tr>
 	<th>작성자</th>

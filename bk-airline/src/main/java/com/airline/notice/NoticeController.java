@@ -25,7 +25,7 @@ public class NoticeController {
 		@Autowired
 		private SqlSession sqlSession;
 		
-		//°øÁö»çÇ× ±Û ÀÛ¼º
+		// ê³µì§€ì‚¬í•­ ì…ë ¥
 		@RequestMapping(value="/notice_input")
 		public String notice_input() {
 			return "notice_input";
@@ -41,7 +41,7 @@ public class NoticeController {
 			return "redirect:notice_list";
 		}
 		
-		//°øÁö»çÇ× ±Û ¸ñ·Ï
+		// ê³µì§€ì‚¬í•­ ëª©ë¡
 		@RequestMapping("/notice_list")
 		public String notice_list(Model model) {
 			NoticeService noticeService = sqlSession.getMapper(NoticeService.class);
@@ -49,7 +49,7 @@ public class NoticeController {
 			model.addAttribute("nlist", alist);
 			return "notice_list";
 		}
-		// °øÁö»çÇ× ±Û ÀÚ¼¼È÷ º¸±â
+		// ê³µì§€ì‚¬í•­ ìì„¸íˆ ë³´ê¸°
 		@RequestMapping("/notice_detail")
 		public String notice_detail(HttpServletRequest request, Model model) {
 			int notice_no = Integer.parseInt(request.getParameter("notice_no"));
@@ -60,13 +60,13 @@ public class NoticeController {
 			return "notice_detail";
 		}
 	
-		// °øÁö»çÇ× Á¶È¸¼ö Áõ°¡
+		//
 		private void readcnt(int notice_no) {
 			NoticeService noticeService = sqlSession.getMapper(NoticeService.class);
 			noticeService.readcnt(notice_no);
 		}
 		
-		// °øÁö»çÇ× ±Û »èÁ¦
+		// ê³µì§€ì‚¬í•­ ì‚­ì œ
 		@RequestMapping(method=RequestMethod.POST, value="notice_delete")
 		public String notice_delete(HttpServletRequest request) {
 			int notice_no = Integer.parseInt(request.getParameter("notice_no"));
@@ -74,11 +74,11 @@ public class NoticeController {
 			noticeService.notice_delete(notice_no);
 			return "redirect:notice_list";
 		}
-		//°øÁö»çÇ× ±Û ¼öÁ¤
+		// ê³µì§€ì‚¬í•­ ìˆ˜ì •
 		@RequestMapping(value="/notice_modifyform", method={RequestMethod.POST})
 		public String notice_modify(HttpServletRequest request, Model mo){
-		int notice_no;
-		notice_no = Integer.parseInt(request.getParameter("notice_no"));
+			
+		int notice_no = Integer.parseInt(request.getParameter("notice_no"));
 		
 		NoticeService dao = sqlSession.getMapper(NoticeService.class);
 		ArrayList<NoticeDTO> ndto = dao.notice_detail(notice_no);
@@ -87,7 +87,7 @@ public class NoticeController {
 		
 			return "notice_modify";
 		}
-		@RequestMapping(value="/notice_modify", method={RequestMethod.POST})
+		@RequestMapping(value="/notice_modify", method=RequestMethod.POST)
 		public String notice_modify(MultipartHttpServletRequest multi)
 		{
 			int notice_no;
@@ -104,7 +104,7 @@ public class NoticeController {
 			return "redirect:notice_list";
 		}	
 		
-		//°øÁö»çÇ× ±Û °Ë»ö
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ë»ï¿½
 		@RequestMapping(value="/notice_search", method=RequestMethod.POST)
 		public String notice_search1(HttpServletRequest request, Model mo)
 		{

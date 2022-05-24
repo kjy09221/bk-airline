@@ -130,6 +130,7 @@ p {
 										<select class="selectOptions" id="Depart">
 											<option>선택</option>
 											<option value="inc" style="width: 100%;">인천(INC)</option>
+											<option value="GMP" style="width: 100%;">김포(GMP)</option>
 										</select>
 									</td>
 								</tr>
@@ -141,6 +142,7 @@ p {
 										<option>선택</option>
 							            	<optgroup label="국내">
 							                	<option value="CJU" style="width: 100%;">제주(CJU)</option>
+							                	<option value="PUS" style="width: 100%;">부산/김해(PUS)</option>
 							                </optgroup>
 							                <optgroup label="일본">
 							                    <option value="NPT" style="width: 100%;">도쿄(NRT)</option>
@@ -172,8 +174,8 @@ p {
 								</td></tr>
 							</table>
 						<table>
-							<tr><td id="btn">
-								<button type="button" class="btn btn-primary" onclick="check()">조회</button>			
+						<tr><td id="btn">
+								<button type="button" class="btn btn-primary" onclick="location.href='flight_view'">조회</button>			
 							</td></tr>
 						</table>
 					</table>				
