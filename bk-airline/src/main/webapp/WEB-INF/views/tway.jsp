@@ -24,7 +24,7 @@ function check(){
 <link rel="stylesheet" href="https://tour.interpark.com/global/css/air_search.css?ver=20200305140" xmlns:js="javascript:code">
 
  <div id="goodsList0Div" class="flight-list-wrapper">
-						<h2 class="search-title style1"> 가는편 <strong>인천(ICN) → 싱가포르(SIN)</strong></h2>
+						<h2 class="search-title style1"> 왕복 <strong>인천(ICN) → 싱가포르(SIN)</strong></h2>
 						<span class="filter-info-area"></span>
 						<div class="air-table filter-air-table">
 							<div class="thead">

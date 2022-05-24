@@ -1,72 +1,66 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>BK airline</title>
-<!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-<script type="text/javascript">
-function check(){
-	if (!confirm("삭제하시겠습니까?")) {
-		history.go(0);
-		return false;
-	}else{
-		alert("삭제가 완료되었습니다");
-	}
+<style type="text/css">
+.container {
+text-align: center;
+width: 100%;
+height: auto;
 }
-</script>
+h2 {
+font-weight: bold;
+text-align: center;
+}
+h3 {
+font-weight: bold;
+}
+h4 {
+font-weight: bold;
+}
+p {
+line-height: 30px;
+padding: 20px;
+}
+.btn {
+width: 70px;
+text-align:center;
+}
+#bb {
+bottom: 50px;
+}
+</style>
 </head>
 <body>
 <%-- 공지사항 글 자세히 보기 --%>
-<c:forEach items="${nlist}" var="n">
-<form action="notice_modifyform?notice_no=${n.notice_no}" method="post">
-	<table class="table table-hover" style="width:80%; margin: auto; align:center">
-		<tr><th colspan="5"><h1 class="mb-5 fw-bold" align="center">공지사항</h1></th></tr>		
-		<tr>
-			<th scope="col" class="text-center">글번호</th>
-			<td>${n.notice_no }<input type="hidden" name="notice_no" value="${n.notice_no}"></td>
-		</tr>
-		<tr>
-			<th scope="col" class="text-center">작성자</th>
-			<td>${n.writer }</td>
-		</tr>
-		<tr>
-			<th scope="col" class="text-center">제목</th>
-			<td>${n.title }</td>
-		</tr>
-		
-		<tr>
-			<th scope="col" class="text-center">내용</th>
-			<td>${n.content }</td>
-		</tr>
-		<tr>
-			<th scope="col" class="text-center">조회수</th>
-			<td>${n.readcnt }</td>
-		</tr>	
-		<tr>
-			<th scope="col" class="text-center">작성일</th>
-			<td>${n.writeday }</td>
-		</tr>
-		<tr>
-			<td colspan="2" align="right">
-			<button class="w-15 btn btn-md btn-primary" type="button" onclick="location.href='notice_list'">목록</button>
-			<c:choose>
-					<c:when test="${isLogOn == true }">
-				<button class="w-15 btn btn-md btn-danger" type="button" onclick="return check()">삭제</button>
-				<button class="w-15 btn btn-md btn-danger" type="submit">수정</button>
-					</c:when>
-			</c:choose>
-			</td>
-		</tr>
-		</c:forEach>
-	</table>
-</form>
+	<div class="container">
+			<c:forEach items="${alist}" var="a">
+				<form action="notice_modifyform?notice_no=${a.notice_no}" method="post">
+					<div>
+						<h3>${a.title }</h3>
+						<h5>
+							<span class="glyphicon glyphicon-pencil"></span> ${a.writer } &emsp; 
+							<span class="glyphicon glyphicon-time"></span> ${a.writeday } &emsp; 조회 ${a.readcnt }
+						</h5>
+						<c:choose>
+							<c:when test="${isLogOn == true }">
+								<h5>
+								<a href="notice_delete?notice_no=${a.notice_no}">
+								<button class="btn btn-md btn-danger" type="button" onclick="return confirm('삭제하시겠습니까?')">삭제</button>
+								</a>
+								<button class="btn btn-md btn-primary" type="submit">수정</button>
+								</h5>
+							</c:when>
+						</c:choose>
+						<p>${a.content}</p>
+					</div>
+					<button id="bb" class="btn btn-md btn-default" type="button" onclick="location.href='notice_list'">목록</button>
+				</form>
+			</c:forEach>	
+	</div>
 </body>
 </html>

@@ -112,7 +112,6 @@ p {
 	font-weight:lighter;
 }
 </style>
-<jsp:include page="cdn.jsp"/>
 <meta charset="UTF-8">
 </head>
 <body>	

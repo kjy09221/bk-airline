@@ -5,63 +5,74 @@
 <html>
 <head>
 <style type="text/css">
-#hh
-{	
-	background-color:#e3f2fd;
-	bordercolor: #e3f2fd;
-	border-collapse: collapse;
+.container {
+text-align: center;
+}
+h2 {
+font-weight: bold;
+padding-bottom: 100px;
+}
+h3 {
+font-weight: bold;
+}
+h4 {
+font-weight: bold;
+}
+img {
+width:100%;
+padding-top: 10px;
+padding-bottom: 30px;
+}
+p {
+line-height: 30px;
+padding-left: 20px;
+padding-right: 20px;
+}
+th, td{
+text-align: center;
+width: 10%;
+}
+.btn {
+	margin-top: 50px;
+	width: 200px;
+	text-align:center;
+	margin-left: 41%;
+	margin-right: 41%;
 }
 </style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<div class="container">
-<h4 align="right" style="padding-right: 100px;"> 검색하기</h4>
-<form action="notice_search" method="post" align="right">
-<select name="category" >
-	<option value="title">제목
-	<option value="writer">작성자
-</select>
-<input type="text" name="search">
-<input type="submit" value="검색">
-</form>
-
-<%-- 공지사항 --%>
-	<table class=" table table-hover" style="width:70%; margin: auto; margin-bottom: 10%; align:center" >
-		<br>
-			<tr>
-				<th colspan="5">
-					<h1 class="mb-5 fw-bold" align="center">공지사항</h1>	<h6 style="text-align: right; padding-right: 10px; ">글을 작성하시려면 로그인을 해주세요.</h6>
-				</th>
-			</tr>
-			<tr id="hh">
-				<th scope="col" class="text-center">글번호</th>
-				<th scope="col" class="text-center">작성자</th>
-				<th scope="col" class="text-center">제목</th>
-				<th scope="col" class="text-center">조회수</th>
-				<th scope="col" class="text-center">작성일</th>
-			</tr>
-		<tbody class="text-center">
-		<c:forEach items="${nlist}" var="n">
-			<tr>
-				<td>${n.notice_no }</td>
-				<td>${n.writer }</td>
-				<td><a id="notice_detail" href="notice_detail?notice_no=${n.notice_no}">${n.title }</a></td>
-				<td>${n.readcnt }</td>
-				<td>${n.writeday }</td>
-			</tr>
-		</c:forEach>
+	<div class="container">
+		<h2>공지사항</h2>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>글번호</th>
+					<th>작성자</th>
+					<th>제목</th>
+					<th>조회수</th>
+					<th>작성일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${nlist}" var="n">
+					<tr>
+						<td>${n.notice_no }</td>
+						<td>${n.writer }</td>
+						<td><a id="notice_detail" href="notice_detail?notice_no=${n.notice_no}">${n.title }</a></td>
+						<td>${n.readcnt }</td>
+						<td>${n.writeday }</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
 		<c:choose>
 			<c:when test="${isLogOn == true}">
-			<tr>
-				<td colspan="5" align="right"><button class="w-15 btn btn-md btn-primary" onclick="location.href='notice_input'">글작성</button></td>
-			</tr>
+				<button class="btn btn-primary col-xs-4" onclick="location.href='notice_input'">글작성</button>
 			</c:when>
 		</c:choose>
-	</tbody>
-</table>
-
-</div>
+	</div>
 </body>
 </html>

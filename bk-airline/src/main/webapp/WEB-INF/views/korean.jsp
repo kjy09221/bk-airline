@@ -25,7 +25,7 @@ function check(){
 
  <div id="goodsList0Div" class="flight-list-wrapper">
   <h6 style="text-align: right; padding-right: 20px; ">예약하시려면 로그인을 해주세요.</h6>
-						<h2 class="search-title style1"> 가는편 <strong>인천(ICN) → 싱가포르(SIN)</strong></h2>
+						<h2 class="search-title style1"> 왕복 <strong>인천(ICN) → 싱가포르(SIN)</strong></h2>
 						<span class="filter-info-area"></span>
 						<div class="air-table filter-air-table">
 							<div class="thead">

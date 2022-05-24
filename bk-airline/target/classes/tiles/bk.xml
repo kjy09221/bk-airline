@@ -69,8 +69,8 @@
       	<put-attribute name="body" value="/WEB-INF/views/notice_detail.jsp"/>
     </definition>
       
-    <definition name="notice_modify" extends="baseLayout">
-      	<put-attribute name="body" value="/WEB-INF/views/notice_modify.jsp"/>
+    <definition name="notice_modifyform" extends="baseLayout">
+      	<put-attribute name="body" value="/WEB-INF/views/notice_modifyform.jsp"/>
     </definition>
     
     <!-- 이용 안내 -->
