@@ -6,8 +6,30 @@
 <head>
 <meta charset="UTF-8"> 
 <link rel="stylesheet" href="https://tour.interpark.com/global/css/air_search.css?ver=20200305140" xmlns:js="javascript:code">
+<script type="text/javascript">
+function check(){
+	let LogOn="${isLogOn}";
+	
+	if (!confirm("예약하시겠습니까?")) {
+		history.go(0);
+		return false;
+	}
+	else if(LogOn == "") {
+		alert("로그인 후 이용 가능합니다.");
+		location.href='login'
+	}
+	else {
+		alert("예약이 완료되었습니다.");
+		location.href='index'
+	}
+}
+</script>
+<style type="text/css">
+.btn {
+margin-top: 5px;
+}
+</style>
 </head>
-<jsp:include page="cdn.jsp"/>
 <body id="air_search" class="air-sub">
 	<div id="air_search" class="air-sub" xmlns:js="javascript:code">
 		<div id="dBody">
@@ -21,7 +43,7 @@
 								<div class="around-start">
 									<strong>인천<span class="ct-code">(INC)</span></strong>
 								<div class="date">
-									22/6/17
+									2022.06.17(금)
 								</div>
 								</div>
 								<div class="around-data">
@@ -32,7 +54,7 @@
 								<div class="around-arrive">
 								<strong>싱가포르<span class="ct-code">(SIN)</span></strong>
 								<div class="date">
-									22/6/23
+									2022.06.23(목)
 								</div>
 								</div>
 								</td>
@@ -59,7 +81,7 @@
 						</ul>
 					</div>							
 					<div class="scroll-body filter-body">
-						<ul id="schedule0List" OnClick="location.href='asiana'" style="cursor:pointer;">
+						<ul id="schedule0List" style="cursor:pointer;">
 							<li>
 								<div class="t1 align-left">
 									<div class="best-group">
@@ -99,10 +121,12 @@
 										<span class="charge-badge status1 ">가능</span>
 									</span>
 									<span class="charge"><strong>1,558,490</strong>원</span>
+									<br>
+									<button type="button" class="btn btn-primary" OnClick="return check()">예약하기</button>
 								</div>
 							</li>
 						</ul>
-						<ul id="schedule0List" OnClick="location.href ='singapore'" style="cursor:pointer;">
+						<ul id="schedule0List" style="cursor:pointer;">
 							<li class="">
 								<div class="t1 align-left">
 									<div class="best-group">
@@ -144,10 +168,12 @@
 									<span class="charge-badge status1 ">가능</span>
 								</span>
 								<span class="charge"><strong>795,000</strong>원</span>
+								<br>
+								<button type="button" class="btn btn-primary" OnClick="return check()">예약하기</button>
 								</div>
 							</li>
 						</ul>
-						<ul id="schedule0List" OnClick="location.href ='tway'" style="cursor:pointer;">
+						<ul id="schedule0List" style="cursor:pointer;">
 							<li class="">
 								<div class="t1 align-left">
 									<div class="best-group"></div>
@@ -187,10 +213,12 @@
 										<span class="charge-badge status1 ">가능</span>
 									</span>
 									<span class="charge"><strong>549,000</strong>원</span>
+									<br>
+									<button type="button" class="btn btn-primary" OnClick="return check()">예약하기</button>
 								</div>
 							</li>
 						</ul>
-						<ul id="schedule0List" OnClick="location.href='korean'" style="cursor:pointer;">
+						<ul id="schedule0List" style="cursor:pointer;">
 							<li class="">
 								<div class="t1 align-left">
 									<div class="best-group">
@@ -232,6 +260,8 @@
 										<span class="charge-badge status1">가능</span>
 									</span>
 									<span class="charge"><strong>1,495,800</strong>원</span>
+									<br>
+									<button type="button" class="btn btn-primary" OnClick="return check()">예약하기</button>
 								</div>
 							</li>
 						</ul>
