@@ -23,7 +23,7 @@ h4 {
 font-weight: bold;
 }
 p {
-line-height: 30px;
+line-height: 200px;
 padding: 20px;
 }
 .btn {
@@ -46,19 +46,22 @@ bottom: 50px;
 							<span class="glyphicon glyphicon-pencil"></span> ${a.writer } &emsp; 
 							<span class="glyphicon glyphicon-time"></span> ${a.writeday } &emsp; 조회 ${a.readcnt }
 						</h5>
-						<c:choose>
+						
+						<p>${a.content}</p>
+					</div>
+					<c:choose>
 							<c:when test="${isLogOn == true }">
 								<h5>
+									<button id="bb" class="btn btn-md btn-default" type="button" onclick="location.href='notice_list'">목록</button>
 								<a href="notice_delete?notice_no=${a.notice_no}">
 								<button class="btn btn-md btn-danger" type="button" onclick="return confirm('삭제하시겠습니까?')">삭제</button>
 								</a>
 								<button class="btn btn-md btn-primary" type="submit">수정</button>
+							
 								</h5>
 							</c:when>
 						</c:choose>
-						<p>${a.content}</p>
-					</div>
-					<button id="bb" class="btn btn-md btn-default" type="button" onclick="location.href='notice_list'">목록</button>
+					
 				</form>
 			</c:forEach>	
 	</div>
