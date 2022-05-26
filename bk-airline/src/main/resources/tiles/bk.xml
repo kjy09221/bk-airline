@@ -128,5 +128,13 @@
 	<definition name="korean" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/views/korean.jsp"/>
 	</definition>
+	
+	<!-- 국내, 국제선 -->
+	<definition name="domestic" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/domestic.jsp"/>
+	</definition>
+	<definition name="inter" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/inter.jsp"/>
+	</definition>
 
 </tiles-definitions>

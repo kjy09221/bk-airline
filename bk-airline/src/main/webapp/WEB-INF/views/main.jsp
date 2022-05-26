@@ -119,14 +119,14 @@ p {
 	<div class="container">
 	<h2>항공권 예매</h2>
 		<div id="researcharea">
-			<form action="searchsave" method="post" name="researchform">	 			
+			<form action="search" method="post" name="researchform">	 			
 					<table id="big1">
 						<tr><td>
 							<table>
 		 						<tr><th>출발지</th></tr>
 		 						<tr>
 		 							<td>
-										<select class="selectOptions" id="depart">
+										<select class="selectOptions" id="depart" name="depart">
 											<option value="">선택</option>
 											<option value="INC" style="width: 100%;">인천(INC)</option>
 											<option value="GMP" style="width: 100%;">김포(GMP)</option>
@@ -137,7 +137,7 @@ p {
 							<table>
 								<tr><th>목적지</th>
 								<tr><td>
-						            <select class="selectOptions" id="arrive">
+						            <select class="selectOptions" id="arrive" name="arrive">
 										<option value="">선택</option>
 							            	<optgroup label="국내">
 							                	<option value="CJU" style="width: 100%;">제주(CJU)</option>
@@ -163,13 +163,13 @@ p {
 								</td></tr>
 							</table>
 							<table>
-								<tr><th>가는날</th></tr><tr><td><input type="date" placeholder="출발 날짜 선택" id="goday"></td></tr></table>
+								<tr><th>가는날</th></tr><tr><td><input type="date" placeholder="출발 날짜 선택" id="goday" name="goday"></td></tr></table>
 							<table>
-								<tr><th>오는날</th></tr><tr><td><input type="date" placeholder="도착 날짜 선택" id="comeday"></td></tr></table>
+								<tr><th>오는날</th></tr><tr><td><input type="date" placeholder="도착 날짜 선택" id="comeday" name="comeday"></td></tr></table>
 							<table>
 								<tr><th>탑승 인원</th>
 								<tr><td>
-									<input type="number" id="people" value="1" min="1" max="9">
+									<input type="number" id="people" name="people" value="1" min="1" max="9">
 								</td></tr>
 							</table>
 						<table>
@@ -224,4 +224,4 @@ p {
 		</div>
 	</div>
 </body>
-</html>
+</html></html>
