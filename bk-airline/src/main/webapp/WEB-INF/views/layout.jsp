@@ -13,10 +13,16 @@ html,body {
 }
 #header {
 position:absolute;
+font-weight: bolder;
+font-style: italic;
+font-family: sans-serif;
 top:0px;
 width:100%;
 height:75px;
+font-size: 48px;
+line-height: 75px;
 padding-left: 15px;
+color: #0969C8;
 background-color: skyblue;
 }
 #nav {

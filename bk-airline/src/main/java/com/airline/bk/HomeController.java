@@ -119,4 +119,15 @@ public class HomeController {
    public String korean() {
       return "korean";
    }
+   /*
+    * 국내, 국제선
+    */
+   @RequestMapping("/domestic")
+   public String domestic() {
+      return "domestic";
+   }
+   @RequestMapping("/inter")
+   public String inter() {
+      return "inter";
+   }
 }
