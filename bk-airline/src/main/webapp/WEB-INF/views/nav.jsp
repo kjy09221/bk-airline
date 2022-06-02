@@ -43,7 +43,8 @@
 			</ul>
 		</li>	  
 
-		<li><a href="notice_list">공지사항</a></li>			
+		<li><a href="notice_list">공지사항</a></li>	
+		<li><a href="mapgo">찾아오시는 길</a></li>		
 
 			
 

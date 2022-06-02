@@ -130,4 +130,8 @@ public class HomeController {
    public String inter() {
       return "inter";
    }
+   @RequestMapping("/mapgo")
+   public String mapgo() {
+      return "mapgo";
+   }
 }

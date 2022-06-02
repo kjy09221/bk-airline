@@ -136,5 +136,9 @@
 	<definition name="inter" extends="baseLayout">
 		<put-attribute name="body" value="/WEB-INF/views/inter.jsp"/>
 	</definition>
+	
+		<definition name="mapgo" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/mapgo.jsp"/>
+	</definition>
 
 </tiles-definitions>
