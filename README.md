@@ -1,4 +1,4 @@
-BK-AIRLINE
+BK airline
 1. 기획
 - 개발환경
 1) 프레임워크 : Spring, Mybatis
